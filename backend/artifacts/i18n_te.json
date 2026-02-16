@@ -1,0 +1,316 @@
+{
+    "animals": {
+        "Cow": "ఆవు",
+        "Buffalo": "గేదె",
+        "Goat": "మేక",
+        "Sheep": "గొర్రె"
+    },
+    "risk_phrase": {
+        "Low Risk": "తక్కువ ప్రమాదం",
+        "Medium Risk": "మధ్యస్థ ప్రమాదం",
+        "High Risk": "అధిక ప్రమాదం"
+    },
+    "symptoms": {
+        "High fever": "తీవ్ర జ్వరం",
+        "Sudden fever": "అకస్మాత్తుగా జ్వరం",
+        "Weakness": "బలహీనత",
+        "Depression": "నిస్సత్తువ",
+        "Sudden death": "అకస్మాత్తుగా మరణం",
+        "Nasal bleeding": "ముక్కు నుండి రక్తస్రావం",
+        "Foamy saliva": "నురుగు లాలాజలం",
+        "Rapid breathing": "వేగంగా శ్వాసించడం",
+        "Lameness": "కుంటుతూ నడవడం",
+        "Swollen joints": "సంధుల వాపు",
+        "Chest pain": "ఛాతి నొప్పి",
+        "Grunting sound": "గొణుగుతున్న శబ్దం",
+        "Reduced movement": "చలనం తగ్గడం",
+        "Recumbency": "పడుకొని ఉండటం",
+        "Fever": "జ్వరం",
+        "Excess salivation": "అధిక లాలాజలం",
+        "Drooling": "లాలాజలం కారడం",
+        "Blisters in mouth": "నోటి పుండ్లు",
+        "Blisters on feet": "కాళ్లపై పుండ్లు",
+        "Hoof lesions": "గోర్ల గాయాలు",
+        "Reduced milk yield": "పాల ఉత్పత్తి తగ్గడం",
+        "Neurological signs": "నాడీ సంబంధ లక్షణాలు",
+        "Incoordination": "సమన్వయం లేకపోవడం",
+        "Paralysis": "పక్షవాతం",
+        "Convulsions": "పిడికిళ్లు",
+        "Restlessness": "అశాంతి",
+        "Difficulty breathing": "శ్వాసలో ఇబ్బంది",
+        "Nasal discharge": "ముక్కు నుండి స్రావం",
+        "Facial swelling": "ముఖం వాపు",
+        "Jaw swelling": "దవడ వాపు",
+        "Skin nodules": "చర్మంపై ముద్దలు",
+        "Skin lesions": "చర్మ గాయాలు",
+        "Swollen lymph nodes": "లింఫ్ గ్రంథుల వాపు",
+        "Eye discharge": "కళ్ల నుండి స్రావం",
+        "Loss of appetite": "ఆహారం తినకపోవడం",
+        "Abortion": "గర్భస్రావం",
+        "Infertility": "సంతానలేమి",
+        "Stillbirth": "మృత శిశువు జననం",
+        "Reduced fertility": "సంతానోత్పత్తి తగ్గడం",
+        "Weight loss": "బరువు తగ్గడం",
+        "Diarrhoea": "విరేచనాలు",
+        "Dehydration": "డీహైడ్రేషన్",
+        "Dullness": "మందగించడం",
+        "Bloody diarrhoea": "రక్తంతో విరేచనాలు",
+        "Udder swelling": "పాలు గ్రంథి వాపు",
+        "Painful udder": "పాలు గ్రంథి నొప్పి",
+        "Abnormal milk": "అసాధారణ పాలు",
+        "Cracked hooves": "పగిలిన గోర్లు",
+        "Cough": "దగ్గు",
+        "Sneezing": "తుమ్ములు",
+        "Anaemia": "రక్తహీనత",
+        "Pale mucous membranes": "తెల్లటి మ్యూకస్ పొరలు",
+        "Dark urine": "ముదురు మూత్రం",
+        "Yellow urine": "పసుపు రంగు మూత్రం",
+        "Itching": "కురుపు",
+        "Scratching": "గోకడం",
+        "Hair loss": "రోమాలు ఊడిపోవడం",
+        "Lethargy": "అలసట",
+        "Abdominal pain": "కడుపు నొప్పి",
+        "Bloat": "కడుపు ఉబ్బరం"
+    },
+    "diseases": {
+        "Anthrax": "అంత్రాక్స్",
+        "Black Quarter": "బ్లాక్ క్వార్టర్",
+        "Foot and Mouth Disease": "గోరు-నోరు వ్యాధి",
+        "Rabies": "రేబీస్",
+        "Blue Tongue": "బ్లూ టంగ్",
+        "Sheep and Goat Pox": "గొర్రె మరియు మేక పాక్స్",
+        "Brucellosis": "బ్రూసెల్లోసిస్",
+        "Tetanus": "టెటనస్",
+        "Listeriosis": "లిస్టీరియోసిస్",
+        "Campylobacter Abortion": "క్యాంపిలోబాక్టర్ గర్భస్రావం",
+        "Johne’s Disease": "జోన్స్ వ్యాధి",
+        "Bovine Ephemeral Fever": "బోవైన్ ఎఫెమరల్ జ్వరం",
+        "Rinderpest": "రిండర్‌పెస్ట్",
+        "Mastitis": "మాస్టిటిస్",
+        "Foot Rot": "పాద కుళ్ళు",
+        "Bovine Rhinotracheitis": "బోవైన్ రైనోట్రాకియటిస్",
+        "Peste des Petits Ruminants": "పీ.పి.ఆర్ (మేక ప్లేగు)",
+        "Babesiosis": "బాబేసియోసిస్",
+        "Theileriosis": "థైలీరియోసిస్",
+        "East Coast Fever": "ఈస్ట్ కోస్ట్ జ్వరం",
+        "Ringworm": "రింగ్‌వార్మ్",
+        "Milk Fever": "మిల్క్ ఫీవర్",
+        "Calf Scour": "దూడ విరేచనాలు",
+        "Haemorrhagic Septicaemia": "హీమోర్రాజిక్ సెప్టిసీమియా",
+        "Enterotoxaemia": "ఎంటెరోటోక్సీమియా",
+        "Fascioliasis": "ఫాసియోలియాసిస్",
+        "Amphistomiasis": "అంఫిస్టోమియాసిస్",
+        "Salmonellosis": "సాల్మొనెల్లోసిస్",
+        "Coccidiosis": "కోక్సిడియోసిస్",
+        "Mange": "మ్యాంజ్",
+        "Anaplasmosis": "అనాప్లాస్మోసిస్",
+        "Lumpy Skin Disease (Lumpy Virus)": "లంపీ స్కిన్ వ్యాధి",
+        "Peste des Petits Ruminants (PPR)": "పీ.పి.ఆర్ (మేక ప్లేగు)"
+    },
+    "prevention_precautions": {
+        "Anthrax": {
+            "prevention_en": "Annual vaccination in endemic areas; avoid grazing in contaminated soil; proper carcass disposal.",
+            "prevention_te": "వ్యాధి ప్రబల ప్రాంతాల్లో వార్షిక టీకా; కలుషిత మట్టిలో మేపడం నివారించడం; మృతదేహాలను సురక్షితంగా పారవేయడం.",
+            "precaution_en": "Do not open carcass; burn or bury with lime; isolate suspected animals; disinfect area.",
+            "precaution_te": "మృతదేహాన్ని తెరవకూడదు; చున్నం వేసి పూడ్చడం లేదా కాల్చడం; అనుమానిత జంతువులను వేరుచేయడం; ప్రాంతాన్ని క్రిమినాశనం చేయడం."
+        },
+        "Black Quarter": {
+            "prevention_en": "Vaccination before monsoon; avoid marshy grazing.",
+            "prevention_te": "వర్షాకాలానికి ముందు టీకా; తడి/చెరువు ప్రాంతాల్లో మేపడం నివారించడం.",
+            "precaution_en": "Isolate lame animals; disinfect sheds; restrict herd movement.",
+            "precaution_te": "కుంటుతున్న జంతువులను వేరుచేయాలి; షెడ్లను క్రిమినాశనం చేయాలి; గుంపు కదలికలను నియంత్రించాలి."
+        },
+        "Foot and Mouth Disease": {
+            "prevention_en": "Biannual vaccination; strict biosecurity; control animal movement.",
+            "prevention_te": "సంవత్సరానికి రెండుసార్లు టీకా; కఠిన బయోసెక్యూరిటీ; జంతువుల రాకపోకలను నియంత్రించడం.",
+            "precaution_en": "Isolate infected animals; disinfect tools; avoid sharing equipment.",
+            "precaution_te": "బాధిత జంతువులను వేరుచేయాలి; పరికరాలను క్రిమినాశనం చేయాలి; పరికరాలు/బకెట్లు పంచుకోవద్దు."
+        },
+        "Rabies": {
+            "prevention_en": "Vaccinate dogs and livestock; control stray dog population.",
+            "prevention_te": "కుక్కలు మరియు పశువులకు టీకాలు; వీధి కుక్కల నియంత్రణ.",
+            "precaution_en": "Avoid handling suspected animals; use protection; report immediately.",
+            "precaution_te": "అనుమానిత జంతువులను తాకవద్దు; గ్లౌవ్స్/రక్షణ వాడాలి; వెంటనే వెటర్నరీకి సమాచారం ఇవ్వాలి."
+        },
+        "Blue Tongue": {
+            "prevention_en": "Vector (midge) control; vaccination where available.",
+            "prevention_te": "మిడ్జ్/కీటక నియంత్రణ; అందుబాటులో ఉన్నచోట టీకా.",
+            "precaution_en": "Use repellents; house animals at dusk; reduce midge exposure.",
+            "precaution_te": "కీటక నివారణ మందులు వాడాలి; సాయంత్రం జంతువులను లోపల ఉంచాలి; మిడ్జ్ ప్రభావాన్ని తగ్గించాలి."
+        },
+        "Sheep and Goat Pox": {
+            "prevention_en": "Vaccination; quarantine new animals.",
+            "prevention_te": "టీకా వేయడం; కొత్త జంతువులను క్వారంటైన్‌లో ఉంచడం.",
+            "precaution_en": "Isolate cases; disinfect housing; avoid mixing flocks.",
+            "precaution_te": "బాధిత జంతువులను వేరుచేయాలి; షెడ్లను క్రిమినాశనం చేయాలి; మందలను కలపవద్దు."
+        },
+        "Brucellosis": {
+            "prevention_en": "Vaccinate young females; test and segregate positives.",
+            "prevention_te": "పిల్ల ఆడ జంతువులకు టీకా; పరీక్షించి పాజిటివ్‌లను వేరుచేయడం.",
+            "precaution_en": "Use gloves during parturition; safely dispose aborted materials.",
+            "precaution_te": "ప్రసవ సమయంలో గ్లౌవ్స్ వాడాలి; గర్భస్రావ పదార్థాలను సురక్షితంగా పారవేయాలి."
+        },
+        "Tetanus": {
+            "prevention_en": "Vaccination; proper wound care.",
+            "prevention_te": "టీకా వేయడం; గాయాల సరైన సంరక్షణ.",
+            "precaution_en": "Disinfect wounds; maintain hygiene during procedures.",
+            "precaution_te": "గాయాలను శుభ్రపరచాలి; కాస్ట్రేషన్/ఇంజెక్షన్ వంటి చర్యల్లో పరిశుభ్రత పాటించాలి."
+        },
+        "Listeriosis": {
+            "prevention_en": "Avoid feeding spoiled silage; proper feed storage.",
+            "prevention_te": "పాడైన సైలేజ్/మేత ఇవ్వకూడదు; మేతను సరిగ్గా నిల్వ చేయాలి.",
+            "precaution_en": "Remove contaminated feed; isolate affected animals.",
+            "precaution_te": "కలుషిత మేతను తొలగించాలి; బాధిత జంతువులను వేరుచేయాలి."
+        },
+        "Campylobacter Abortion": {
+            "prevention_en": "Breeding hygiene; test breeding males.",
+            "prevention_te": "ప్రజనన పరిశుభ్రత; సంతానోత్పత్తి కోసం వాడే మగ జంతువులను పరీక్షించడం.",
+            "precaution_en": "Isolate aborting animals; disinfect calving area.",
+            "precaution_te": "గర్భస్రావం జరిగిన జంతువులను వేరుచేయాలి; ప్రసవ ప్రాంతాన్ని క్రిమినాశనం చేయాలి."
+        },
+        "Johne’s Disease": {
+            "prevention_en": "Test and cull policy; hygienic calf rearing.",
+            "prevention_te": "పరీక్షించి పాజిటివ్‌లను తొలగించడం; దూడలను పరిశుభ్రంగా పెంచడం.",
+            "precaution_en": "Prevent fecal contamination of feed and water; separate young stock.",
+            "precaution_te": "మేత/నీటిలో మలం కలయికను నివారించాలి; చిన్న జంతువులను పెద్దవాటి నుంచి వేరుగా ఉంచాలి."
+        },
+        "Bovine Ephemeral Fever": {
+            "prevention_en": "Vector control; vaccination in endemic regions.",
+            "prevention_te": "కీటక నియంత్రణ; ప్రబల ప్రాంతాల్లో టీకా.",
+            "precaution_en": "Provide shade and water; isolate affected animals.",
+            "precaution_te": "నీడ, నీరు అందించాలి; బాధిత జంతువులను వేరుచేయాలి."
+        },
+        "Rinderpest": {
+            "prevention_en": "Strict surveillance and biosecurity (eradicated disease).",
+            "prevention_te": "కఠిన పర్యవేక్షణ మరియు బయోసెక్యూరిటీ (నిర్మూలించబడిన వ్యాధి).",
+            "precaution_en": "Immediate reporting; quarantine suspicious cases.",
+            "precaution_te": "అనుమానిత కేసులను వెంటనే తెలియజేయాలి; క్వారంటైన్‌లో ఉంచాలి."
+        },
+        "Mastitis": {
+            "prevention_en": "Milking hygiene; teat dipping; clean bedding.",
+            "prevention_te": "పాలు దోచే పరిశుభ్రత; టీట్ డిప్పింగ్; శుభ్రమైన మంచం/బెడ్డింగ్.",
+            "precaution_en": "Regular udder checks; separate infected animals during milking.",
+            "precaution_te": "పాలు గ్రంథిని తరచుగా పరిశీలించాలి; పాలు దోచేటప్పుడు బాధిత జంతువులను వేరుగా దోచాలి."
+        },
+        "Foot Rot": {
+            "prevention_en": "Footbath disinfectant; maintain dry flooring.",
+            "prevention_te": "ఫుట్‌బాత్ క్రిమినాశక ద్రావణం; నేల పొడిగా ఉంచడం.",
+            "precaution_en": "Trim hooves; isolate affected animals.",
+            "precaution_te": "గోర్లను కత్తిరించాలి; బాధిత జంతువులను వేరుచేయాలి."
+        },
+        "Bovine Rhinotracheitis": {
+            "prevention_en": "Vaccination; quarantine new stock.",
+            "prevention_te": "టీకా వేయడం; కొత్త జంతువులను క్వారంటైన్‌లో ఉంచడం.",
+            "precaution_en": "Improve ventilation; isolate infected animals.",
+            "precaution_te": "గాలి ప్రసరణ మెరుగుపరచాలి; బాధిత జంతువులను వేరుచేయాలి."
+        },
+        "Peste des Petits Ruminants": {
+            "prevention_en": "Vaccination; control animal movement.",
+            "prevention_te": "టీకా వేయడం; జంతువుల రాకపోకలను నియంత్రించడం.",
+            "precaution_en": "Isolate infected animals; disinfect sheds.",
+            "precaution_te": "బాధిత జంతువులను వేరుచేయాలి; షెడ్లను క్రిమినాశనం చేయాలి."
+        },
+        "Peste des Petits Ruminants (PPR)": {
+            "prevention_en": "Vaccination; control animal movement.",
+            "prevention_te": "టీకా వేయడం; జంతువుల రాకపోకలను నియంత్రించడం.",
+            "precaution_en": "Isolate infected animals; disinfect sheds.",
+            "precaution_te": "బాధిత జంతువులను వేరుచేయాలి; షెడ్లను క్రిమినాశనం చేయాలి."
+        },
+        "Babesiosis": {
+            "prevention_en": "Tick control; pasture management.",
+            "prevention_te": "టిక్ నియంత్రణ; మేత భూముల నిర్వహణ.",
+            "precaution_en": "Inspect animals for ticks; isolate weak animals.",
+            "precaution_te": "టిక్‌ల కోసం జంతువులను పరిశీలించాలి; బలహీన జంతువులను వేరుచేయాలి."
+        },
+        "Theileriosis": {
+            "prevention_en": "Tick control; vaccination where available.",
+            "prevention_te": "టిక్ నియంత్రణ; అందుబాటులో ఉన్నచోట టీకా.",
+            "precaution_en": "Use acaricides; avoid tick-infested grazing.",
+            "precaution_te": "అకరీసైడ్స్ వాడాలి; టిక్‌లు ఎక్కువగా ఉన్న మేత ప్రదేశాలను నివారించాలి."
+        },
+        "East Coast Fever": {
+            "prevention_en": "Tick control; vaccination.",
+            "prevention_te": "టిక్ నియంత్రణ; టీకా (అందుబాటులో ఉన్నచోట).",
+            "precaution_en": "Monitor tick load; isolate sick animals.",
+            "precaution_te": "టిక్ మోతాదును గమనించాలి; అనారోగ్య జంతువులను వేరుచేయాలి."
+        },
+        "Ringworm": {
+            "prevention_en": "Maintain hygiene; avoid overcrowding.",
+            "prevention_te": "పరిశుభ్రత నిలుపుకోవాలి; అధిక గుంపును నివారించాలి.",
+            "precaution_en": "Isolate affected animals; disinfect equipment.",
+            "precaution_te": "బాధిత జంతువులను వేరుచేయాలి; పరికరాలను క్రిమినాశనం చేయాలి."
+        },
+        "Milk Fever": {
+            "prevention_en": "Balanced mineral diet before calving.",
+            "prevention_te": "ప్రసవానికి ముందు సమతుల్య ఖనిజాహారం (క్యాల్షియం నిర్వహణ).",
+            "precaution_en": "Provide calcium supplements after calving.",
+            "precaution_te": "ప్రసవం తర్వాత వెంటనే క్యాల్షియం సప్లిమెంట్లు ఇవ్వాలి."
+        },
+        "Calf Scour": {
+            "prevention_en": "Clean calving area; early colostrum feeding.",
+            "prevention_te": "ప్రసవ స్థలం శుభ్రంగా ఉంచాలి; త్వరగా కొలస్ట్రమ్ ఇవ్వాలి.",
+            "precaution_en": "Maintain hygiene; isolate scouring calves.",
+            "precaution_te": "పరిశుభ్రత పాటించాలి; విరేచనాలున్న దూడలను వేరుచేయాలి."
+        },
+        "Haemorrhagic Septicaemia": {
+            "prevention_en": "Annual vaccination before monsoon.",
+            "prevention_te": "వర్షాకాలానికి ముందు వార్షిక టీకా.",
+            "precaution_en": "Isolate infected animals; disinfect surroundings.",
+            "precaution_te": "బాధిత జంతువులను వేరుచేయాలి; పరిసరాలను క్రిమినాశనం చేయాలి."
+        },
+        "Enterotoxaemia": {
+            "prevention_en": "Vaccination; controlled feeding practices.",
+            "prevention_te": "టీకా వేయడం; ఆహారం అకస్మాత్తుగా మార్చకుండా నియంత్రిత ఆహార పద్ధతులు.",
+            "precaution_en": "Avoid sudden diet change; isolate sick animals.",
+            "precaution_te": "ఆహార మార్పు ఒక్కసారిగా చేయకూడదు; అనారోగ్య జంతువులను వేరుచేయాలి."
+        },
+        "Fascioliasis": {
+            "prevention_en": "Deworming schedule; avoid swampy grazing.",
+            "prevention_te": "పురుగుమందుల షెడ్యూల్; తడి/చెరువు మేత ప్రదేశాలను నివారించడం.",
+            "precaution_en": "Provide clean water; monitor body condition.",
+            "precaution_te": "శుభ్రమైన నీరు అందించాలి; బరువు/శరీర స్థితిని గమనించాలి."
+        },
+        "Amphistomiasis": {
+            "prevention_en": "Deworming; avoid snail-infested fields.",
+            "prevention_te": "పురుగుమందులు; నత్తలు ఎక్కువగా ఉన్న మేత ప్రదేశాలను నివారించడం.",
+            "precaution_en": "Drain stagnant water; provide dry fodder.",
+            "precaution_te": "నిల్వ నీటిని తొలగించాలి; పొడి మేత ఇవ్వాలి."
+        },
+        "Salmonellosis": {
+            "prevention_en": "Hygienic feed and water; rodent control.",
+            "prevention_te": "శుభ్రమైన మేత/నీరు; ఎలుకల నియంత్రణ.",
+            "precaution_en": "Isolate diarrhoeic animals; disinfect sheds.",
+            "precaution_te": "విరేచనాలున్న జంతువులను వేరుచేయాలి; షెడ్లను క్రిమినాశనం చేయాలి."
+        },
+        "Coccidiosis": {
+            "prevention_en": "Dry housing; avoid overcrowding.",
+            "prevention_te": "పొడి మరియు శుభ్రమైన గుడిసె; అధిక గుంపును నివారించడం.",
+            "precaution_en": "Regular cleaning; isolate young animals if affected.",
+            "precaution_te": "తరచూ శుభ్రపరచాలి; ప్రభావిత చిన్న జంతువులను వేరుచేయాలి."
+        },
+        "Mange": {
+            "prevention_en": "Regular skin inspection; acaricide treatment.",
+            "prevention_te": "చర్మాన్ని తరచూ పరిశీలించడం; అకరీసైడ్ చికిత్స.",
+            "precaution_en": "Isolate affected animals; disinfect bedding.",
+            "precaution_te": "బాధిత జంతువులను వేరుచేయాలి; బెడ్డింగ్‌ను క్రిమినాశనం చేయాలి."
+        },
+        "Anaplasmosis": {
+            "prevention_en": "Tick control; avoid reuse of needles.",
+            "prevention_te": "టిక్ నియంత్రణ; సూదులను తిరిగి ఉపయోగించకూడదు.",
+            "precaution_en": "Disinfect equipment; monitor anaemic animals.",
+            "precaution_te": "పరికరాలను క్రిమినాశనం చేయాలి; రక్తహీనత ఉన్న జంతువులను గమనించాలి."
+        },
+        "Lumpy Skin Disease": {
+            "prevention_en": "Vaccination; vector control; quarantine new animals.",
+            "prevention_te": "టీకా వేయడం; కీటక నియంత్రణ; కొత్త జంతువులను క్వారంటైన్‌లో ఉంచడం.",
+            "precaution_en": "Isolate infected animals; control insects; disinfect sheds.",
+            "precaution_te": "బాధిత జంతువులను వేరుచేయాలి; కీటకాలను నియంత్రించాలి; షెడ్లను క్రిమినాశనం చేయాలి."
+        },
+        "Lumpy Skin Disease (Lumpy Virus)": {
+            "prevention_en": "Vaccination; vector control; quarantine new animals.",
+            "prevention_te": "టీకా వేయడం; కీటక నియంత్రణ; కొత్త జంతువులను క్వారంటైన్‌లో ఉంచడం.",
+            "precaution_en": "Isolate infected animals; control insects; disinfect sheds.",
+            "precaution_te": "బాధిత జంతువులను వేరుచేయాలి; కీటకాలను నియంత్రించాలి; షెడ్లను క్రిమినాశనం చేయాలి."
+        }
+    }
+}

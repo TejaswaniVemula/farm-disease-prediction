@@ -1,0 +1,61 @@
+Symptom,Risk_Level
+High fever,Mid
+Sudden fever,Mid
+Weakness,Mid
+Depression,Mid
+Sudden death,High
+Nasal bleeding,High
+Foamy saliva,High
+Rapid breathing,High
+Lameness,Mid
+Swollen joints,Mid
+Chest pain,High
+Grunting sound,High
+Reduced movement,Mid
+Recumbency,High
+Fever,Mid
+Excess salivation,High
+Drooling,High
+Blisters in mouth,High
+Blisters on feet,High
+Hoof lesions,Mid
+Reduced milk yield,Mid
+Neurological signs,High
+Incoordination,High
+Paralysis,High
+Convulsions,High
+Restlessness,Mid
+Difficulty breathing,High
+Nasal discharge,Mid
+Facial swelling,High
+Jaw swelling,High
+Skin nodules,High
+Skin lesions,Mid
+Swollen lymph nodes,Mid
+Eye discharge,Mid
+Loss of appetite,Mid
+Abortion,High
+Infertility,Mid
+Stillbirth,High
+Reduced fertility,Mid
+Weight loss,Mid
+Diarrhoea,Mid
+Dehydration,High
+Dullness,Mid
+Bloody diarrhoea,High
+Udder swelling,Mid
+Painful udder,Mid
+Abnormal milk,Mid
+Cracked hooves,Mid
+Cough,Mid
+Sneezing,Low
+Anaemia,High
+Pale mucous membranes,High
+Dark urine,High
+Yellow urine,High
+Itching,Low
+Scratching,Low
+Hair loss,Low
+Lethargy,Mid
+Abdominal pain,Mid
+Bloat,High
