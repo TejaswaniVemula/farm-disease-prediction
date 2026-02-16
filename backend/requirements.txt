@@ -1,10 +1,9 @@
 fastapi
 uvicorn
-pydantic
-numpy
-pandas
-scipy
-scikit-learn
-joblib
-catboost
 python-multipart
+pandas
+numpy
+scipy
+joblib
+scikit-learn==1.7.2
+catboost==1.2.8
