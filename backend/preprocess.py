@@ -1,30 +1,73 @@
+# backend/preprocess.py
+from __future__ import annotations
+
 import re
 import json
-import pandas as pd
+import csv
+from pathlib import Path
 from typing import List, Dict, Union
 
 VALID_ANIMALS = {"Cow", "Buffalo", "Goat", "Sheep"}
+
 
 def normalize_text(s: str) -> str:
     s = str(s).replace("’", "'").strip()
     s = re.sub(r"\s+", " ", s)
     return s
 
-def load_allowed_symptoms(path: str) -> List[str]:
-    df = pd.read_csv(path)
-    col = "Symptom" if "Symptom" in df.columns else df.columns[0]
-    return sorted(set(df[col].dropna().astype(str).map(normalize_text)), key=str.lower)
 
-def load_i18n(i18n_path: str) -> Dict:
-    with open(i18n_path, "r", encoding="utf-8") as f:
+def load_i18n(i18n_path: Union[str, Path]) -> Dict:
+    i18n_path = Path(i18n_path)
+    with i18n_path.open("r", encoding="utf-8") as f:
         return json.load(f)
 
+
+def load_allowed_symptoms(path: Union[str, Path]) -> List[str]:
+    """
+    Reads unique_symptoms.csv (first column) and returns sorted unique symptom list.
+    No pandas required => easier deployment.
+    """
+    path = Path(path)
+    if not path.exists():
+        raise FileNotFoundError(f"unique_symptoms.csv not found: {path}")
+
+    items: List[str] = []
+    with path.open("r", encoding="utf-8", newline="") as f:
+        reader = csv.reader(f)
+        rows = list(reader)
+
+    if not rows:
+        return []
+
+    # Skip header if looks like "Symptom"
+    first = rows[0][0].strip().lower() if rows[0] else ""
+    start_idx = 1 if first in {"symptom", "symptoms"} else 0
+
+    for r in rows[start_idx:]:
+        if not r:
+            continue
+        v = normalize_text(r[0])
+        if v:
+            items.append(v)
+
+    # unique preserving order
+    seen = set()
+    uniq = []
+    for x in items:
+        if x not in seen:
+            uniq.append(x)
+            seen.add(x)
+
+    return sorted(uniq, key=str.lower)
+
+
 def build_reverse_map(en_to_te: Dict[str, str]) -> Dict[str, str]:
-    te_to_en = {}
+    te_to_en: Dict[str, str] = {}
     for en, te in en_to_te.items():
         if te:
             te_to_en[normalize_text(te)] = normalize_text(en)
     return te_to_en
+
 
 def to_english_symptom(symptom: str, allowed_map: Dict[str, str], te_to_en: Dict[str, str]):
     s = normalize_text(symptom)
@@ -34,6 +77,7 @@ def to_english_symptom(symptom: str, allowed_map: Dict[str, str], te_to_en: Dict
         s = te_to_en[s]
     return allowed_map.get(s.lower(), None)
 
+
 def preprocess_user_input(
     animal: str,
     symptoms_input: Union[str, List[str]],
@@ -42,8 +86,9 @@ def preprocess_user_input(
     min_symptoms: int = 3,
     max_symptoms: int = 8,
 ) -> Dict:
-    errors = []
+    errors: List[str] = []
 
+    # Animal normalize + Telugu -> English fallback
     animal_clean = normalize_text(animal).title()
     if animal_clean not in VALID_ANIMALS:
         te_animals = i18n.get("animals", {})
@@ -53,21 +98,23 @@ def preprocess_user_input(
         else:
             errors.append(f"Invalid animal '{animal}'. Allowed: {sorted(VALID_ANIMALS)}")
 
+    # Parse symptoms input
     if isinstance(symptoms_input, list):
         raw = [normalize_text(x) for x in symptoms_input if str(x).strip()]
     else:
         raw = [normalize_text(x) for x in str(symptoms_input).split(",") if str(x).strip()]
 
+    # Unique + cap
     seen = set()
     raw_unique = []
     for x in raw:
         if x and x not in seen:
             seen.add(x)
             raw_unique.append(x)
-
     if len(raw_unique) > max_symptoms:
         raw_unique = raw_unique[:max_symptoms]
 
+    # Build mappings
     allowed_map = {s.lower(): s for s in allowed_symptoms}
     en_to_te = i18n.get("symptoms", {})
     te_to_en = build_reverse_map(en_to_te)
@@ -80,6 +127,7 @@ def preprocess_user_input(
         else:
             unknown.append(s)
 
+    # Unique again
     cleaned2, seen2 = [], set()
     for x in cleaned:
         if x not in seen2:
