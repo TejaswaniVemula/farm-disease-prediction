@@ -9,8 +9,8 @@ function RiskBadge({ label }) {
   const cls = isHigh
     ? "badge badge-high"
     : isMed
-    ? "badge badge-med"
-    : "badge badge-low";
+      ? "badge badge-med"
+      : "badge badge-low";
 
   return <span className={cls}>{label}</span>;
 }
@@ -75,7 +75,7 @@ export default function App() {
     setResult(null);
 
     if (selected.length < 3) {
-      setError("Select at least 3 symptoms.");
+      setError("Select at least 3 symptoms.// కనీసం 3 లక్షణాలను ఎంచుకోండి.");
       return;
     }
 
@@ -94,15 +94,13 @@ export default function App() {
     <div className="page">
       <div className="topbar">
         <div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white">
-              Farm Animal Disease Prediction System
-            </h1>
-            <p className="text-emerald-50 text-sm md:text-base mt-1">
-              పశువుల వ్యాధి అంచనా వ్యవస్థ
-            </p>
+          <p><h1>Farm Animal Disease Prediction and Risk Analysis System </h1></p>
+          <p className="name">
+            పశువుల వ్యాధి అంచనా మరియు ప్రమాద విశ్లేషణ వ్యవస్థ
+          </p>
         </div>
 
-        
+
       </div>
 
       <div className="layout">
@@ -110,16 +108,16 @@ export default function App() {
         <div className="card">
           <div className="card-header">
             <div>
-              <div className="card-title">Input</div>
-              <div className="card-hint">Select animal and symptoms (min 3, max 8)</div>
+              <div className="card-title">Input / నమోదు చేసిన సమాచారం</div>
+              <div className="card-hint">Select animal and symptoms (min 3, max 8) / జంతువు మరియు లక్షణాలను ఎంచుకోండి (కనీసం 3, గరిష్టం 8)</div>
             </div>
             <button className="btn btn-ghost" onClick={clearAll}>
-              Clear
+              Clear/తొలగించు
             </button>
           </div>
 
           <div className="field">
-            <label className="label">Animal</label>
+            <label className="label">Animal/జంతువు</label>
             <select className="select" value={animal} onChange={(e) => setAnimal(e.target.value)}>
               <option value="Cow">Cow / ఆవు</option>
               <option value="Buffalo">Buffalo / గేదె</option>
@@ -129,7 +127,7 @@ export default function App() {
           </div>
 
           <div className="field">
-            <label className="label">Search Symptoms</label>
+            <label className="label">Search Symptoms/లక్షణాలను శోధించండి</label>
             <input
               className="input"
               placeholder="Type fever / జ్వరం ..."
@@ -140,10 +138,10 @@ export default function App() {
 
           <div className="field">
             <label className="label">
-              Selected Symptoms <span className="muted">({selected.length}/8)</span>
+              Selected Symptoms/ ఎంచుకున్న లక్షణాలు<span className="muted">({selected.length}/8)</span>
             </label>
             {selected.length === 0 ? (
-              <div className="empty">No symptoms selected yet.</div>
+              <div className="empty">No symptoms selected yet./ఇప్పటికీ ఎలాంటి లక్షణాలు ఎంచుకోలేదు.</div>
             ) : (
               <div className="pill-wrap">
                 {selected.map((en, idx) => (
@@ -158,7 +156,7 @@ export default function App() {
           </div>
 
           <div className="field">
-            <label className="label">Choose Symptoms</label>
+            <label className="label">Choose Symptoms/లక్షణాలను ఎంచుకోండి</label>
             <div className="symptom-grid">
               {filteredSymptoms.map((s) => (
                 <button
@@ -179,7 +177,7 @@ export default function App() {
               {loading ? "Predicting..." : "Predict"}
             </button>
             <div className="helper">
-              Tip: Choose the most noticeable symptoms first for better confidence.
+              Tip: Choose the most noticeable symptoms first for better confidence./సూచన: మంచి ఖచ్చితత్వం కోసం ముందుగా స్పష్టంగా కనిపించే లక్షణాలను ఎంచుకోండి.
             </div>
           </div>
 
@@ -190,26 +188,26 @@ export default function App() {
         <div className="card">
           <div className="card-header">
             <div>
-              <div className="card-title">Output</div>
-              <div className="card-hint">Predicted disease, risk level and guidance</div>
+              <div className="card-title">Output/ఫలితం</div>
+              <div className="card-hint">Predicted disease, risk level and guidance/అంచనా వ్యాధి, ప్రమాద స్థాయి మరియు మార్గదర్శకం</div>
             </div>
           </div>
 
           {!result ? (
             <div className="empty big">
-              <div className="empty-title">No prediction yet</div>
-              <div className="empty-sub">Select symptoms and click Predict to view results.</div>
+              <div className="empty-title">No prediction yet/ఇప్పటికీ అంచనా లేదు</div>
+              <div className="empty-sub">Select symptoms and click Predict to view results./ఫలితాలను చూడడానికి లక్షణాలను ఎంచుకుని Predict పై క్లిక్ చేయండి.</div>
             </div>
           ) : (
             <>
               <div className="summary">
                 <div className="summary-box">
-                  <div className="summary-label">Animal</div>
+                  <div className="summary-label">Animal/జంతువు</div>
                   <div className="summary-value">{result.animal.display}</div>
                 </div>
 
                 <div className="summary-box">
-                  <div className="summary-label">Risk</div>
+                  <div className="summary-label">Risk/ప్రమాద స్థాయి</div>
                   <div className="summary-value">
                     <RiskBadge label={result.risk.overall.display} />
                   </div>
@@ -217,20 +215,20 @@ export default function App() {
               </div>
 
               <div className="section">
-                <div className="section-title">Selected Symptoms</div>
+                <div className="section-title">Selected Symptoms/ఎంచుకున్న లక్షణాలు</div>
                 <div className="section-body">
                   {result.symptoms.map((x) => x.display).join(", ")}
                 </div>
               </div>
 
               <div className="section">
-                <div className="section-title">Top Predictions</div>
+                <div className="section-title">Top Predictions/ప్రధాన అంచనాలు</div>
                 <div className="table-wrap">
                   <table className="table">
                     <thead>
                       <tr>
-                        <th>Disease</th>
-                        <th style={{ width: 130 }}>Probability</th>
+                        <th>Disease/వ్యాధి</th>
+                        <th style={{ width: 130 }}>Probability/సంభావ్యత</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -238,7 +236,7 @@ export default function App() {
                         <tr key={i} className={i === 0 ? "row-highlight" : ""}>
                           <td>
                             <div className="disease-name">{p.disease.display}</div>
-                            {i === 0 && <div className="muted">Most likely</div>}
+                            {i === 0 && <div className="muted">Most likely/అత్యంత సంభవించే</div>}
                           </td>
                           <td>
                             <div className="prob">
@@ -255,19 +253,19 @@ export default function App() {
                 </div>
 
                 <div className="alert alert-info">
-                  <b>Risk Explanation:</b> {result.risk.explanation}
+                  <b>Risk Explanation:/ప్రమాద వివరణ:</b> {result.risk.explanation}
                 </div>
               </div>
 
               <div className="two-col">
                 <div className="panel">
-                  <div className="panel-title">Prevention</div>
+                  <div className="panel-title">Prevention/నిరోధక చర్యలు</div>
                   <div className="panel-body">
                     {result.prevention ? result.prevention.display : "—"}
                   </div>
                 </div>
                 <div className="panel">
-                  <div className="panel-title">Precautions</div>
+                  <div className="panel-title">Precautions/జాగ్రత్తలు</div>
                   <div className="panel-body">
                     {result.precautions ? result.precautions.display : "—"}
                   </div>
@@ -275,7 +273,7 @@ export default function App() {
               </div>
 
               <div className="footer-note">
-                ⚠️ This system provides decision support only. Consult a veterinary doctor for confirmation.
+                ⚠️ This system provides decision support only. Consult a veterinary doctor for confirmation./ఈ వ్యవస్థ నిర్ణయానికి సహాయం చేయడానికి మాత్రమే. నిర్ధారణ కోసం వెటర్నరీ డాక్టర్‌ను సంప్రదించండి.
               </div>
             </>
           )}
