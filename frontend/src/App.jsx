@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { getSymptoms, predict } from "./services/api";
 
 
+
 function RiskBadge({ label }) {
   // label example: "High Risk / అధిక ప్రమాదం"
   const isHigh = label.toLowerCase().includes("high risk");
@@ -91,6 +92,32 @@ export default function App() {
   };
 
   return (
+    <>
+    <nav className="navbar">
+  <div className="navbar-logo">Farm Animal Disease Prediction</div>
+  <div className="navbar-links">
+    <a href="#home">Home</a>
+    <a href="#predict">Predict</a>
+    <a href="#disease-info">Disease Info</a>
+    <a href="#risk-guide">Risk Guide</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+<section id="home" className="hero">
+  <h1>Farm Animal Disease Prediction and Risk Analysis System</h1>
+  <p className="name">పశువుల వ్యాధి అంచనా మరియు ప్రమాద విశ్లేషణ వ్యవస్థ</p>
+  <p className="hero-text">
+    Predict livestock diseases using symptoms, analyze risk level, and view prevention guidance.
+  </p>
+  <a href="#predict" className="btn btn-primary">Start Prediction</a>
+</section>
+    <section id="predict">
+  <div className="section-heading">
+    <h2>Disease Prediction</h2>
+    <p>Select animal and symptoms to get prediction results.</p>
+  </div>
+
+  <div className="layout">
     <div className="page">
       <div className="topbar">
         <div>
@@ -280,5 +307,47 @@ export default function App() {
         </div>
       </div>
     </div>
+  </div>
+</section>
+<section id="disease-info" className="info-section card">
+  <h2>Disease Information</h2>
+  <p>
+    The system predicts possible farm animal diseases based on selected symptoms and animal type.
+    It supports diseases affecting cows, buffaloes, goats, and sheep.
+  </p>
+  <ul>
+    <li>Symptom-based disease prediction</li>
+    <li>Top disease probabilities</li>
+    <li>Bilingual output in English and Telugu</li>
+    <li>Prevention and precaution guidance</li>
+  </ul>
+</section>
+<section id="risk-guide" className="info-section card">
+  <h2>Risk Guide</h2>
+  <div className="risk-grid">
+    <div className="risk-box low">
+      <h3>Low Risk</h3>
+      <p>Mild condition. Monitor symptoms and maintain hygiene.</p>
+    </div>
+    <div className="risk-box med">
+      <h3>Medium Risk</h3>
+      <p>Needs attention. Follow preventive measures and observe closely.</p>
+    </div>
+    <div className="risk-box high">
+      <h3>High Risk</h3>
+      <p>Urgent condition. Consult a veterinary doctor immediately.</p>
+    </div>
+  </div>
+</section>
+<section id="about" className="info-section card">
+  <h2>About the Project</h2>
+  <p>
+    This project uses machine learning techniques such as TF-IDF, Random Forest, and CatBoost
+    to predict diseases in farm animals based on symptoms. It also performs risk analysis and
+    provides preventive guidance through a web-based interface.
+  </p>
+</section>
+
+    </>
   );
 }
