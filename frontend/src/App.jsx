@@ -76,7 +76,7 @@ export default function App() {
     setResult(null);
 
     if (selected.length < 3) {
-      setError("Select at least 3 symptoms.// కనీసం 3 లక్షణాలను ఎంచుకోండి.");
+      setError("Select at least 3 symptoms./ కనీసం 3 లక్షణాలను ఎంచుకోండి.");
       return;
     }
 
